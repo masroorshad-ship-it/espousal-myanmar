@@ -193,3 +193,9 @@ html[lang="my"] .hero__tag { font-style: normal; }
 .footer img { height: 90px; width: auto; margin: 0 auto 14px; }
 .footer p { font-size: 12px; color: rgba(244, 239, 230, .45); max-width: 860px; margin: 10px auto 0; }
 .footer a { text-decoration: underline; }
+
+/* benefits: current offers call-out */
+.offer-box { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-top: 26px; padding: 26px 28px; border: 1px solid var(--gold); background: linear-gradient(100deg, rgba(201, 163, 95, .14), rgba(201, 163, 95, .03)); }
+.offer-box h3 { margin: 0 0 4px; font: 400 24px/1.4 var(--display); color: var(--gold-hi); }
+.offer-box p { margin: 0; color: var(--mute); }
+@media (max-width: 620px) { .offer-box .btn { flex: 1 1 100%; } }

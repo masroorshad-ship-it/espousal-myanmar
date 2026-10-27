@@ -12,7 +12,7 @@ import os
 ROOT = os.path.dirname(os.path.abspath(__file__))
 IMG = '/assets/img/'
 PIXEL_ID = '806806699194177'
-VER = '20261028'
+VER = '20261028b'
 # Kyat figures use the Central Bank of Myanmar reference rate (1 AED ≈ 571.8 MMK, Oct 2026).
 # The informal market rate is roughly double, so every page says the MMK amount is approximate.
 MMK_NOTE_MY = 'ကျပ်ငွေ ပမာဏများသည် ဗဟိုဘဏ် ရည်ညွှန်းနှုန်း (1 AED ≈ 572 ကျပ်) ဖြင့် ခန့်မှန်းချက်သာ ဖြစ်ပါသည်။'
@@ -78,6 +78,7 @@ T = {
                 'general': {'title': 'အသေးစိတ် တောင်းခံရန်', 'sub': 'အမည်နှင့် အီးမေးလ်ကို ဖြည့်ပါ။ ကျွန်ုပ်တို့၏ အကြံပေးမှ မကြာမီ ဆက်သွယ်ပါမည်။', 'cta': 'ပေးပို့ရန်', 'subject': 'General Enquiry'},
                 'price-list': {'title': 'စျေးနှုန်းစာရင်း ရယူရန်', 'sub': 'နောက်ဆုံး စျေးနှုန်းစာရင်း၊ အခန်းပုံစံများနှင့် ငွေပေးချေမှု အစီအစဉ်ကို အီးမေးလ်ဖြင့် ပို့ပေးပါမည်။', 'cta': 'စျေးနှုန်းစာရင်း ပို့ပေးပါ', 'subject': 'Price List Request'},
                 'brochure': {'title': 'Brochure ဒေါင်းလုဒ်', 'sub': 'အချက်အလက် ဖြည့်ပြီး ပေးပို့သည်နှင့် brochure ကို ချက်ချင်း ဒေါင်းလုဒ် လုပ်ပါမည်။', 'cta': 'ပေးပို့ပြီး ဒေါင်းလုဒ်', 'subject': 'Brochure Download'},
+                'offers': {'title': 'လက်ရှိ ကမ်းလှမ်းချက်များ', 'sub': 'developer ၏ လက်ရှိ ကမ်းလှမ်းချက်များကို အီးမေးလ်ဖြင့် ပို့ပေးပါမည်။', 'cta': 'ကမ်းလှမ်းချက်များ ပို့ပေးပါ', 'subject': 'Current Offers Request'},
                 'notify': {'title': 'ပရောဂျက်အသစ် အသိပေးချက်', 'sub': 'ပရောဂျက်အသစ်များ ထွက်ရှိသည်နှင့် အီးမေးလ်ဖြင့် ဦးစွာ အသိပေးပါမည်။', 'cta': 'စာရင်းသွင်းရန်', 'subject': 'New Projects Alert'},
             },
         },
@@ -104,6 +105,18 @@ T = {
         ],
         'towers_req': [('The Tranquil', 'tower-tranquil.jpg'), ('The Eden', '../towers-night.jpg')],
         'req': 'အသေးစိတ်ကို တောင်းဆိုမှုဖြင့်', 'req_btn': 'အသေးစိတ် တောင်းခံရန်', 'brochure_btn': 'Brochure ဒေါင်းလုဒ်',
+        'ben_eyebrow': 'အကျိုးကျေးဇူးများ',
+        'ben_title': 'Espousal နှင့် <span class="gold">ဝယ်ယူခြင်း</span>',
+        'ben': [
+            ('Golden Visa အတွက် အရည်အချင်း ပြည့်မီနိုင်သော အိမ်များ', 'AED 2.47 သန်းမှ စတင်သော အိပ်ခန်း 2 နှင့် 3 ခန်း နေအိမ်များသည် UAE ၏ 10 နှစ် Golden Visa အတွက် အရည်အချင်း ပြည့်မီနိုင်ပါသည်။ ဗီဇာကို UAE အစိုးရမှ အတည်ပြုချထားပေးပြီး ဆောက်လုပ်ဆဲ အိမ်များအတွက် သတ်မှတ်ချက်များ ရှိပါသည်။'),
+            ('လွယ်ကူသော ငွေပေးချေမှု', '40% ကို ဆောက်လုပ်ဆဲကာလအတွင်း အရစ်ကျ ပေးချေပြီး ကျန် 60% ကို ဒီဇင်ဘာ 2029 – 2030 တွင် အိမ်ပြီးစီးချိန်၌ ပေးချေပါ။'),
+            ('အခမဲ့ virtual tour', 'ဒူဘိုင်းသို့ မလာမီ video call ဖြင့် အခန်းပုံစံများ၊ ရှုခင်းများနှင့် ပရောဂျက်ကို ကြည့်ရှုနိုင်ပါသည်။'),
+            ('ကိုယ်ပိုင် အကြံပေး', 'အခန်း ရွေးချယ်ခြင်းမှ စာရွက်စာတမ်းများ၊ ငွေပေးချေမှုနှင့် သော့ လက်ခံရယူခြင်းအထိ တစ်ဆင့်ချင်း လမ်းညွှန်ပေးပါသည်။'),
+        ],
+        'ben_offer_title': 'လက်ရှိ အထူး ကမ်းလှမ်းချက်များ',
+        'ben_offer_text': 'developer ၏ လက်ရှိ ကမ်းလှမ်းချက်များနှင့် ငွေပေးချေမှု အစီအစဉ်များကို အီးမေးလ်ဖြင့် ပို့ပေးပါမည်။',
+        'ben_offer_btn': 'လက်ရှိ ကမ်းလှမ်းချက်များ မေးမြန်းရန်',
+        'ben_note': 'Golden Visa ကို UAE အစိုးရ၏ သတ်မှတ်ချက်များနှင့် အတည်ပြုချက်အရသာ ချထားပေးပါသည်။ Espousal မှ ဗီဇာကို အာမခံ မပေးပါ။',
         'plan_eyebrow': 'ငွေပေးချေမှု အစီအစဉ်',
         'plan_title': 'လွယ်ကူသော <span class="gold">ငွေပေးချေမှု</span>',
         'plan_a': 'ဆောက်လုပ်ဆဲ ကာလအတွင်း', 'plan_b': 'ပြီးစီးချိန်တွင်',
@@ -186,6 +199,7 @@ T = {
                 'general': {'title': 'Request Details', 'sub': 'Share your name and email and our advisor will be in touch shortly.', 'cta': 'Submit', 'subject': 'General Enquiry'},
                 'price-list': {'title': 'Get the Price List', 'sub': 'We will email you the latest price list, floor plans and payment plan.', 'cta': 'Send Me the Price List', 'subject': 'Price List Request'},
                 'brochure': {'title': 'Download Brochure', 'sub': 'Fill in your details — the download starts as soon as you submit.', 'cta': 'Submit & Download', 'subject': 'Brochure Download'},
+                'offers': {'title': 'Current Offers', 'sub': 'We will email you the developer’s current offers and payment plans.', 'cta': 'Send Me the Offers', 'subject': 'Current Offers Request'},
                 'notify': {'title': 'New Project Alerts', 'sub': 'We will email you first when new projects are added.', 'cta': 'Register', 'subject': 'New Projects Alert'},
             },
         },
@@ -211,6 +225,18 @@ T = {
         ],
         'towers_req': [('The Tranquil', 'tower-tranquil.jpg'), ('The Eden', '../towers-night.jpg')],
         'req': 'Details on request', 'req_btn': 'Request Details', 'brochure_btn': 'Download Brochure',
+        'ben_eyebrow': 'Benefits',
+        'ben_title': 'Buying with <span class="gold">Espousal</span>',
+        'ben': [
+            ('Golden Visa eligible homes', 'Two and three bedroom residences from AED 2.47M may qualify for the UAE 10-year Golden Visa. The visa is granted by the UAE government, and off-plan homes have extra conditions — ask us how it works.'),
+            ('An easy payment plan', 'Pay 40% in instalments during construction and the remaining 60% on completion, in December 2029 – 2030 depending on the tower.'),
+            ('Free virtual tour', 'See the layouts, views and the project on a video call before you travel to Dubai.'),
+            ('Your personal advisor', 'Step-by-step help from choosing a home to documents, payments and receiving your keys.'),
+        ],
+        'ben_offer_title': 'Current special offers',
+        'ben_offer_text': 'We will email you the developer’s current offers and payment plans.',
+        'ben_offer_btn': 'Ask About Current Offers',
+        'ben_note': 'The Golden Visa is subject to UAE government criteria and approval. Espousal does not guarantee visa approval.',
         'plan_eyebrow': 'Payment Plan',
         'plan_title': 'An easy <span class="gold">payment plan</span>',
         'plan_a': 'During construction', 'plan_b': 'On completion',
@@ -418,6 +444,7 @@ def home(t, lang):
 
 def sobha_central(t, lang):
     facts = ''.join(f'<div><b>{a}</b><span>{b}</span></div>' for a, b in t['facts'])
+    ben = ''.join(f'<div class="feature"><h3>{x}</h3><p>{y}</p></div>' for x, y in t['ben'])
     towers = ''
     for key, name, img, line, res, size, hand in t['towers']:
         towers += f'''<article class="card tower">
@@ -460,6 +487,18 @@ def sobha_central(t, lang):
   <div class="wrap">
     <div class="head"><p class="eyebrow">{t['towers_eyebrow']}</p><h2 class="title">{t['towers_title']}</h2><p class="sub">{t['towers_sub']}</p></div>
     <div class="grid grid--3">{towers}</div>
+  </div>
+</section>
+
+<section class="section" id="benefits">
+  <div class="wrap">
+    <div class="head"><p class="eyebrow">{t['ben_eyebrow']}</p><h2 class="title">{t['ben_title']}</h2></div>
+    <div class="grid grid--4">{ben}</div>
+    <div class="offer-box">
+      <div><h3>{t['ben_offer_title']}</h3><p>{t['ben_offer_text']}</p></div>
+      <button class="btn btn--gold" data-enquire="offers" data-item="Sobha Central">{t['ben_offer_btn']}</button>
+    </div>
+    <p class="note">{t['ben_note']}</p>
   </div>
 </section>
 
