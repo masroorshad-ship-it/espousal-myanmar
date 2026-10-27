@@ -199,3 +199,7 @@ html[lang="my"] .hero__tag { font-style: normal; }
 .offer-box h3 { margin: 0 0 4px; font: 400 24px/1.4 var(--display); color: var(--gold-hi); }
 .offer-box p { margin: 0; color: var(--mute); }
 @media (max-width: 620px) { .offer-box .btn { flex: 1 1 100%; } }
+.chips--offer { margin-top: 14px; }
+.chips--offer span { border-color: var(--gold); color: var(--gold-hi); background: rgba(11, 13, 28, .4); }
+.offer-box p.offer-star { margin-top: 10px; font-size: 12px; color: rgba(244, 239, 230, .5); }
+.offer-box > div { flex: 1 1 420px; }

@@ -12,7 +12,7 @@ import os
 ROOT = os.path.dirname(os.path.abspath(__file__))
 IMG = '/assets/img/'
 PIXEL_ID = '806806699194177'
-VER = '20261028b'
+VER = '20261028c'
 # Kyat figures use the Central Bank of Myanmar reference rate (1 AED ≈ 571.8 MMK, Oct 2026).
 # The informal market rate is roughly double, so every page says the MMK amount is approximate.
 MMK_NOTE_MY = 'ကျပ်ငွေ ပမာဏများသည် ဗဟိုဘဏ် ရည်ညွှန်းနှုန်း (1 AED ≈ 572 ကျပ်) ဖြင့် ခန့်မှန်းချက်သာ ဖြစ်ပါသည်။'
@@ -115,6 +115,8 @@ T = {
         ],
         'ben_offer_title': 'လက်ရှိ အထူး ကမ်းလှမ်းချက်များ',
         'ben_offer_text': 'developer ၏ လက်ရှိ ကမ်းလှမ်းချက်များနှင့် ငွေပေးချေမှု အစီအစဉ်များကို အီးမေးလ်ဖြင့် ပို့ပေးပါမည်။',
+        'ben_offer_chips': ['20/80 ငွေပေးချေမှု အစီအစဉ်များ*', 'DLD အခကြေးငွေ ကင်းလွတ်ခွင့် ကမ်းလှမ်းချက်များ*', 'Golden Visa အကြံပေးချက်'],
+        'ben_offer_star': '* developer မှ အချိန်အကန့်အသတ်ဖြင့် ကမ်းလှမ်းသည့်အခါမှသာ ရရှိနိုင်ပါသည်။ ယနေ့ ရရှိနိုင်သော ကမ်းလှမ်းချက်များကို ကျွန်ုပ်တို့၏ အကြံပေးထံ မေးမြန်းပါ။',
         'ben_offer_btn': 'လက်ရှိ ကမ်းလှမ်းချက်များ မေးမြန်းရန်',
         'ben_note': 'Golden Visa ကို UAE အစိုးရ၏ သတ်မှတ်ချက်များနှင့် အတည်ပြုချက်အရသာ ချထားပေးပါသည်။ Espousal မှ ဗီဇာကို အာမခံ မပေးပါ။',
         'plan_eyebrow': 'ငွေပေးချေမှု အစီအစဉ်',
@@ -235,6 +237,8 @@ T = {
         ],
         'ben_offer_title': 'Current special offers',
         'ben_offer_text': 'We will email you the developer’s current offers and payment plans.',
+        'ben_offer_chips': ['20/80 payment plans*', 'DLD fee waiver offers*', 'Golden Visa guidance'],
+        'ben_offer_star': '* Only when offered by the developer, for a limited period. Ask our advisor which offers are available today.',
         'ben_offer_btn': 'Ask About Current Offers',
         'ben_note': 'The Golden Visa is subject to UAE government criteria and approval. Espousal does not guarantee visa approval.',
         'plan_eyebrow': 'Payment Plan',
@@ -445,6 +449,7 @@ def home(t, lang):
 def sobha_central(t, lang):
     facts = ''.join(f'<div><b>{a}</b><span>{b}</span></div>' for a, b in t['facts'])
     ben = ''.join(f'<div class="feature"><h3>{x}</h3><p>{y}</p></div>' for x, y in t['ben'])
+    offer_chips = ''.join(f'<span>{c}</span>' for c in t['ben_offer_chips'])
     towers = ''
     for key, name, img, line, res, size, hand in t['towers']:
         towers += f'''<article class="card tower">
@@ -495,7 +500,7 @@ def sobha_central(t, lang):
     <div class="head"><p class="eyebrow">{t['ben_eyebrow']}</p><h2 class="title">{t['ben_title']}</h2></div>
     <div class="grid grid--4">{ben}</div>
     <div class="offer-box">
-      <div><h3>{t['ben_offer_title']}</h3><p>{t['ben_offer_text']}</p></div>
+      <div><h3>{t['ben_offer_title']}</h3><p>{t['ben_offer_text']}</p><div class="chips chips--offer">{offer_chips}</div><p class="offer-star">{t['ben_offer_star']}</p></div>
       <button class="btn btn--gold" data-enquire="offers" data-item="Sobha Central">{t['ben_offer_btn']}</button>
     </div>
     <p class="note">{t['ben_note']}</p>
