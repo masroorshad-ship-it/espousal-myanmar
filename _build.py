@@ -12,7 +12,7 @@ import os
 ROOT = os.path.dirname(os.path.abspath(__file__))
 IMG = '/assets/img/'
 PIXEL_ID = '806806699194177'
-VER = '20261027b'
+VER = '20261028'
 # Kyat figures use the Central Bank of Myanmar reference rate (1 AED ≈ 571.8 MMK, Oct 2026).
 # The informal market rate is roughly double, so every page says the MMK amount is approximate.
 MMK_NOTE_MY = 'ကျပ်ငွေ ပမာဏများသည် ဗဟိုဘဏ် ရည်ညွှန်းနှုန်း (1 AED ≈ 572 ကျပ်) ဖြင့် ခန့်မှန်းချက်သာ ဖြစ်ပါသည်။'
@@ -264,7 +264,6 @@ def head(t, lang, page, title, desc):
   <meta property="og:title" content="{esc(title)}">
   <meta property="og:description" content="{esc(desc)}">
   <meta property="og:image" content="https://mm.espousalconstruction.com{IMG}hero-aerial.jpg">
-  <meta name="robots" content="noindex">
   <meta name="theme-color" content="#0b0d1c">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
