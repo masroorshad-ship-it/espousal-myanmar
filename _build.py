@@ -12,7 +12,7 @@ import os
 ROOT = os.path.dirname(os.path.abspath(__file__))
 IMG = '/assets/img/'
 PIXEL_ID = '806806699194177'
-VER = '20261028c'
+VER = '20261028d'
 # Kyat figures use the Central Bank of Myanmar reference rate (1 AED ≈ 571.8 MMK, Oct 2026).
 # The informal market rate is roughly double, so every page says the MMK amount is approximate.
 MMK_NOTE_MY = 'ကျပ်ငွေ ပမာဏများသည် ဗဟိုဘဏ် ရည်ညွှန်းနှုန်း (1 AED ≈ 572 ကျပ်) ဖြင့် ခန့်မှန်းချက်သာ ဖြစ်ပါသည်။'
@@ -113,11 +113,11 @@ T = {
             ('အခမဲ့ virtual tour', 'ဒူဘိုင်းသို့ မလာမီ video call ဖြင့် အခန်းပုံစံများ၊ ရှုခင်းများနှင့် ပရောဂျက်ကို ကြည့်ရှုနိုင်ပါသည်။'),
             ('ကိုယ်ပိုင် အကြံပေး', 'အခန်း ရွေးချယ်ခြင်းမှ စာရွက်စာတမ်းများ၊ ငွေပေးချေမှုနှင့် သော့ လက်ခံရယူခြင်းအထိ တစ်ဆင့်ချင်း လမ်းညွှန်ပေးပါသည်။'),
         ],
-        'ben_offer_title': 'လက်ရှိ အထူး ကမ်းလှမ်းချက်များ',
-        'ben_offer_text': 'developer ၏ လက်ရှိ ကမ်းလှမ်းချက်များနှင့် ငွေပေးချေမှု အစီအစဉ်များကို အီးမေးလ်ဖြင့် ပို့ပေးပါမည်။',
-        'ben_offer_chips': ['20/80 ငွေပေးချေမှု အစီအစဉ်များ*', 'DLD အခကြေးငွေ ကင်းလွတ်ခွင့် ကမ်းလှမ်းချက်များ*', 'Golden Visa အကြံပေးချက်'],
-        'ben_offer_star': '* developer မှ အချိန်အကန့်အသတ်ဖြင့် ကမ်းလှမ်းသည့်အခါမှသာ ရရှိနိုင်ပါသည်။ ယနေ့ ရရှိနိုင်သော ကမ်းလှမ်းချက်များကို ကျွန်ုပ်တို့၏ အကြံပေးထံ မေးမြန်းပါ။',
-        'ben_offer_btn': 'လက်ရှိ ကမ်းလှမ်းချက်များ မေးမြန်းရန်',
+        'ben_offer_title': 'ယခု ရရှိနိုင်သော အထူး ကမ်းလှမ်းချက်များ',
+        'ben_offer_text': 'Sobha Central တွင် ရွေးချယ်ထားသော အခန်းများအတွက် developer မှ ကမ်းလှမ်းထားပါသည်။ ရရှိနိုင်သော အခန်းများနှင့် အသေးစိတ် စည်းကမ်းချက်များကို အီးမေးလ်ဖြင့် ပို့ပေးပါမည်။',
+        'ben_offer_chips': ['20/80 ငွေပေးချေမှု — booking တွင် 20%၊ ပြီးစီးချိန်တွင် 80%', 'DLD မှတ်ပုံတင်ခ ကင်းလွတ်ခွင့်', 'Golden Visa အကြံပေးချက်'],
+        'ben_offer_star': 'စည်းကမ်းချက်များ သက်ဆိုင်ပါသည်။ ရွေးချယ်ထားသော အခန်းများအတွက်သာ ဖြစ်ပြီး developer ၏ အတည်ပြုချက်နှင့် ရရှိနိုင်မှုအပေါ် မူတည်ပါသည်။ ကမ်းလှမ်းချက်များကို developer မှ ကြိုတင် အသိပေးခြင်း မရှိဘဲ ပြောင်းလဲ သို့မဟုတ် ရပ်ဆိုင်းနိုင်ပါသည်။',
+        'ben_offer_btn': 'ကမ်းလှမ်းချက် အသေးစိတ် ရယူရန်',
         'ben_note': 'Golden Visa ကို UAE အစိုးရ၏ သတ်မှတ်ချက်များနှင့် အတည်ပြုချက်အရသာ ချထားပေးပါသည်။ Espousal မှ ဗီဇာကို အာမခံ မပေးပါ။',
         'plan_eyebrow': 'ငွေပေးချေမှု အစီအစဉ်',
         'plan_title': 'လွယ်ကူသော <span class="gold">ငွေပေးချေမှု</span>',
@@ -235,11 +235,11 @@ T = {
             ('Free virtual tour', 'See the layouts, views and the project on a video call before you travel to Dubai.'),
             ('Your personal advisor', 'Step-by-step help from choosing a home to documents, payments and receiving your keys.'),
         ],
-        'ben_offer_title': 'Current special offers',
-        'ben_offer_text': 'We will email you the developer’s current offers and payment plans.',
-        'ben_offer_chips': ['20/80 payment plans*', 'DLD fee waiver offers*', 'Golden Visa guidance'],
-        'ben_offer_star': '* Only when offered by the developer, for a limited period. Ask our advisor which offers are available today.',
-        'ben_offer_btn': 'Ask About Current Offers',
+        'ben_offer_title': 'Special offers — available now',
+        'ben_offer_text': 'Offered by the developer on selected units at Sobha Central. We will email you the eligible units and full terms.',
+        'ben_offer_chips': ['20/80 payment plan — 20% on booking, 80% on completion', 'DLD registration fee waiver', 'Golden Visa guidance'],
+        'ben_offer_star': 'T&C apply. Selected units only, subject to availability and developer approval. Offers may be changed or withdrawn by the developer without notice.',
+        'ben_offer_btn': 'Get Offer Details',
         'ben_note': 'The Golden Visa is subject to UAE government criteria and approval. Espousal does not guarantee visa approval.',
         'plan_eyebrow': 'Payment Plan',
         'plan_title': 'An easy <span class="gold">payment plan</span>',
