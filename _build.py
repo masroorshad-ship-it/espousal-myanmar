@@ -12,7 +12,8 @@ import os
 ROOT = os.path.dirname(os.path.abspath(__file__))
 IMG = '/assets/img/'
 PIXEL_ID = '806806699194177'
-VER = '20261028d'
+VER = '20261029a'
+WA = 'https://wa.me/971506429453?text=' + 'Hi%2C%20I%27m%20interested%20in%20Sobha%20Central%2C%20Dubai%20(Myanmar%20site).%20Please%20send%20me%20the%20price%20list%20and%20floor%20plans.'
 # Kyat figures use the Central Bank of Myanmar reference rate (1 AED ≈ 571.8 MMK, Oct 2026).
 # The informal market rate is roughly double, so every page says the MMK amount is approximate.
 MMK_NOTE_MY = 'ကျပ်ငွေ ပမာဏများသည် ဗဟိုဘဏ် ရည်ညွှန်းနှုန်း (1 AED ≈ 572 ကျပ်) ဖြင့် ခန့်မှန်းချက်သာ ဖြစ်ပါသည်။'
@@ -66,6 +67,7 @@ T = {
         'privacy': 'သင့်အချက်အလက်များကို Espousal အရောင်းအဖွဲ့နှင့်သာ မျှဝေပါမည်။',
         'privacy_link': 'ကိုယ်ရေးအချက်အလက် မူဝါဒ (English)',
         'email_us': 'သို့မဟုတ် အီးမေးလ် ပို့ရန်',
+        'wa_us': 'သို့မဟုတ် WhatsApp ဖြင့် ဆက်သွယ်ရန်', 'wa_btn': 'WhatsApp ဖြင့် မေးမြန်းရန်',
         'footer_by': 'Espousal — Sobha Realty ၏ Authorised Channel Partner',
         'disclaimer': 'ဤဝက်ဘ်ဆိုက်ကို Espousal မှ လုပ်ဆောင်ပြီး developer များ၏ တရားဝင် ဝက်ဘ်ဆိုက် မဟုတ်ပါ။ ပုံများသည် ကွန်ပျူတာဖြင့် ဖန်တီးထားသော ပုံဖော်ချက်များ ဖြစ်ပါသည်။ စျေးနှုန်း၊ ငွေပေးချေမှု အစီအစဉ်၊ အရွယ်အစားနှင့် ပြီးစီးမည့်ရက်များသည် ခန့်မှန်းချက်သာ ဖြစ်ပြီး ကြိုတင် အသိပေးခြင်း မရှိဘဲ ပြောင်းလဲနိုင်ပါသည်။ ကျပ်ငွေ ပမာဏများသည် ဗဟိုဘဏ် ရည်ညွှန်းနှုန်း (1 AED ≈ 572 ကျပ်) ဖြင့် ခန့်မှန်း ပြောင်းလဲထားခြင်းသာ ဖြစ်ပြီး အမှန်တကယ် ငွေလဲနှုန်းနှင့် များစွာ ကွာခြားနိုင်ပါသည်။ ဝယ်ယူမှုတိုင်းသည် developer ၏ KYC/AML စစ်ဆေးမှုများနှင့် သက်ဆိုင်ပါသည်။',
         'js': {
@@ -189,6 +191,7 @@ T = {
         'privacy': 'Your details are shared only with the Espousal sales team.',
         'privacy_link': 'Privacy Policy',
         'email_us': 'Or email us at',
+        'wa_us': 'Or WhatsApp us on', 'wa_btn': 'Chat on WhatsApp',
         'footer_by': 'Espousal — Authorised Channel Partner of Sobha Realty',
         'disclaimer': 'This website is operated by Espousal and is not the official website of any developer. Images are computer-generated renderings. Prices, payment plans, sizes and completion dates are indicative and may change without notice. MMK amounts are approximate conversions at the Central Bank reference rate (1 AED ≈ 572 MMK) and can differ significantly from the rate you actually receive. Every purchase is subject to the developer’s KYC/AML checks.',
         'js': {
@@ -349,6 +352,7 @@ def contact(t):
     <div class="head"><p class="eyebrow">{t['contact_eyebrow']}</p><h2 class="title">{t['contact_title']}</h2><p class="sub">{t['contact_sub']}</p></div>
     {form(t, 'form--2')}
     <p class="note">{t['email_us']} <a href="mailto:masroorshad@gmail.com" style="text-decoration:underline">masroorshad@gmail.com</a></p>
+    <p class="note">{t['wa_us']} <a href="{WA}" target="_blank" rel="noopener" style="text-decoration:underline">+971 50 642 9453</a></p>
   </div>
 </section>
 '''
@@ -360,9 +364,11 @@ def tail(t):
     <img src="{IMG}espousal-logo.png" alt="Espousal Construction" width="220" height="182" loading="lazy">
     <p>{t['footer_by']}</p>
     <p>{t['disclaimer']}</p>
-    <p>© <span id="yr">2026</span> Espousal · <a href="mailto:masroorshad@gmail.com">masroorshad@gmail.com</a></p>
+    <p>© <span id="yr">2026</span> Espousal · <a href="mailto:masroorshad@gmail.com">masroorshad@gmail.com</a> · WhatsApp <a href="{WA}" target="_blank" rel="noopener">+971 50 642 9453</a></p>
   </div>
 </footer>
+
+<a class="wa-float" href="{WA}" target="_blank" rel="noopener" aria-label="{t['wa_btn']}"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg></a>
 
 <div class="modal" id="modal" aria-hidden="true">
   <div class="modal__bg" data-close></div>
