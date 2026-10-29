@@ -12,7 +12,7 @@ import os
 ROOT = os.path.dirname(os.path.abspath(__file__))
 IMG = '/assets/img/'
 PIXEL_ID = '806806699194177'
-VER = '20261029a'
+VER = '20261030a'
 WA = 'https://wa.me/971506429453?text=' + 'Hi%2C%20I%27m%20interested%20in%20Sobha%20Central%2C%20Dubai%20(Myanmar%20site).%20Please%20send%20me%20the%20price%20list%20and%20floor%20plans.'
 # Kyat figures use the Central Bank of Myanmar reference rate (1 AED ≈ 571.8 MMK, Oct 2026).
 # The informal market rate is roughly double, so every page says the MMK amount is approximate.

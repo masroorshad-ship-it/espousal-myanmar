@@ -105,6 +105,8 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var msg = $('.form-msg', form), btn = $('button[type="submit"]', form);
+      // Ignore repeat taps while a submission is on its way (avoids duplicate leads).
+      if (btn.disabled) return;
       msg.className = 'form-msg'; msg.textContent = '';
       if (!validate(form)) { msg.classList.add('is-err'); msg.textContent = T.invalid; return; }
       var ctx = form.getAttribute('data-context') || 'general';
@@ -129,7 +131,7 @@
         _captcha: 'false'
       };
       var original = btn.textContent;
-      btn.setAttribute('aria-busy', 'true'); btn.textContent = T.sending;
+      btn.disabled = true; btn.setAttribute('aria-busy', 'true'); btn.textContent = T.sending;
       if (ctx === 'brochure') downloadBrochure(form.getAttribute('data-brochure'));
       Promise.all([sendEmail(data), sendSheet(data)]).then(function (r) {
         if (!r[0] && !r[1]) throw new Error('send failed');
@@ -141,7 +143,7 @@
       }).catch(function () {
         msg.classList.add('is-err');
         msg.innerHTML = T.fail + ' <a href="mailto:' + CONFIG.EMAIL + '" style="text-decoration:underline">' + CONFIG.EMAIL + '</a>';
-      }).then(function () { btn.removeAttribute('aria-busy'); btn.textContent = original; });
+      }).then(function () { btn.disabled = false; btn.removeAttribute('aria-busy'); btn.textContent = original; });
     });
   });
 
